@@ -1,4 +1,4 @@
-
+import pandas as pd
 class Vertice:
     def __init__(self, nome, continente=None):
         self.nome = nome
