@@ -71,7 +71,7 @@ class BellmanFordApp:
         if aresta:
             self.result_text.delete(1.0, tk.END)
             self.result_text.insert(tk.END,
-                                    f"Menor caminho de {vertice_origem_nome} para {vertice_destino_nome}: {aresta}\n")
+                                    f"Menor caminho de {vertice_origem_nome} para {vertice_destino_nome}: {aresta} Km\n")
             self.result_text.insert(tk.END, "Caminho: " + " -> ".join([vertice_origem_nome, vertice_destino_nome]) + "\n")
         else:
             caminho, distancia = grafo.bellman_ford(vertice_origem, vertice_destino)
