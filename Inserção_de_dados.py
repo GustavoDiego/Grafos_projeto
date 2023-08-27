@@ -40,6 +40,29 @@ class Grafo:
                 if v == destino:
                     return w
         return None
+    def bellman_ford(self, origem, destino):
+
+        dist = {vertice: float("inf") for vertice in self.grafo}
+        dist[origem] = 0
+        visitados = {}  # Dicionário para rastrear os vértices visitados
+        visitados[origem] = [origem]
+
+        for _ in range(len(self.grafo) - 1):
+
+
+            for u in self.grafo:
+
+
+                for v, w in self.grafo[u]:
+
+
+                    if dist[u] != float("inf") and dist[u] + w < dist[v]:
+                        dist[v] = dist[u] + w
+                        visitados[v] = visitados[u] + [v]
+
+
+
+        return visitados[destino], dist[destino]
 
 # Carregar os dados da planilha atual
 planilha = pd.read_excel("Database/Continental.xlsx")
