@@ -3,20 +3,20 @@ Projeto de criação, manipulação e visualização de grafos.
  
 
  
-
+<img src="Imagens_readme/Horizontal-Vermelho-Logotipo-CIn-UFPE.png">
  
 
  
 
-      Universidade Federal de Pernambuco  
+Universidade Federal de Pernambuco  
 
-      Centro de Informática - CIn  
+Centro de Informática - CIn  
 
- 
 
-      Disciplina: Algoritmos e estruturas de dados 
 
-      Docente: Sergio Ricardo de Melo Queiroz 
+Disciplina: Algoritmos e estruturas de dados 
+
+Docente: Sergio Ricardo de Melo Queiroz 
 
 Discente:  
 
@@ -68,35 +68,33 @@ Conclusão O programa funciona seguinte forma: o usuário terá a opção de vis
 Imagens da interface gráfica: 
 
  
-
+<img src="Imagens_readme/Captura de tela 2023-08-27 172129.png">
  
 
 Página inicial 
 
- 
+ <img src="Imagens_readme/Captura de tela 2023-08-27 172141.png">
 
 Seleção dos países 
 
  
-
- 
-
+<img src="Imagens_readme/Captura de tela 2023-08-27 173907.png">
 	 
 
 Resultado da busca 
 
- 
+ <img src="Imagens_readme/Captura de tela 2023-08-27 173907.png">
 
 Imagens da visualização gráfica: 
 
  
-
+<img src="Imagens_readme/Captura de tela 2023-08-27 172011.png">
  
 
 Grafo separado por cores que representam os continentes 
 
  
-
+<img src="Imagens_readme/Captura de tela 2023-08-27 172051.png">
  
 
 Grafo ampliado com as arestas coloridas (quanto mais verde menor é o peso e quanto mais vermelho maior o peso) 
