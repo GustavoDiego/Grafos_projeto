@@ -78,7 +78,7 @@ class BellmanFordApp:
             if caminho:
                 self.result_text.delete(1.0, tk.END)
                 self.result_text.insert(tk.END,
-                                        f"Menor caminho de {vertice_origem_nome} para {vertice_destino_nome}: {distancia}\n")
+                                        f"Menor caminho de {vertice_origem_nome} para {vertice_destino_nome}: {distancia} Km\n")
                 self.result_text.insert(tk.END, "Caminho: " + " -> ".join([vertice for vertice in caminho]) + "\n")
             else:
                 self.result_text.insert(tk.END, "Não há caminho entre os vértices.\n")
