@@ -41,3 +41,40 @@ class Grafo:
                     return w
         return None
 
+# Carregar os dados da planilha atual
+planilha = pd.read_excel("Database/Continental.xlsx")
+
+# Carregar os dados da planilha intercontinental
+planilha_intercontinental = pd.read_excel("Database/Intercontinental.xlsx")
+# Criar um grafo
+grafo = Grafo()
+
+unique_vertex_names = set()
+
+# Adicionar vértices com continente da planilha atual
+for index, linha in planilha.iterrows():
+    vertice1 = Vertice(linha["Inicio"], linha["Continente"])
+    vertice2 = Vertice(linha["Fim"], linha["Continente"])
+
+    if vertice1.nome not in unique_vertex_names:
+        grafo.vertices_di(vertice1)
+
+        unique_vertex_names.add(vertice1.nome)
+
+    if vertice2.nome not in unique_vertex_names:
+        grafo.vertices_di(vertice2)
+
+        unique_vertex_names.add(vertice2.nome)
+
+
+    grafo.adicionar_aresta(linha["Inicio"], linha["Fim"], linha["Distancia"])
+
+# Adicionar arestas da planilha intercontinental
+for index, linha in planilha_intercontinental.iterrows():
+    vertice1_nome = linha["Inicio"]
+    vertice2_nome = linha["Fim"]
+
+    if vertice1_nome in grafo.grafo and vertice2_nome in grafo.grafo:
+        vertice1 = vertice1_nome
+        vertice2 = vertice2_nome
+        grafo.adicionar_aresta(vertice1, vertice2, linha["Distancia"])
